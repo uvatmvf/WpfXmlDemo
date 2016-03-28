@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WpfXmlDemo.SimpleDataNodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" Padding="5">
+  
+    <Expander x:FieldModifier="public"
+              x:Name="expDesc" 
+              Foreground="White"
+              Background="Blue"
+              FontSize="16"
+              FontWeight="Bold"
+              IsExpanded="True" 
+              HorizontalAlignment="Stretch"
+              HorizontalContentAlignment="Stretch" 
+              Width="Auto" 
+              Header="Configuration 123"              
+              Template="{StaticResource StretchyExpanderTemp}">
+        <Border x:FieldModifier="public" x:Name="NodeBorder" CornerRadius="2" BorderThickness="1,0,2,2"> 
+            <Grid x:FieldModifier="public" x:Name="NodeGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+    </Expander>
+</UserControl>

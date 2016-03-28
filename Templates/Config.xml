@@ -1,0 +1,44 @@
+﻿<Config>
+  <timeout>15</timeout>
+  <lastSalesSync description="Last Sales Sync">0001-01-01T00:00:00</lastSalesSync>
+  <lastInventorySync>0001-01-01T00:00:00</lastInventorySync>
+  <cloudEndpoint>http://devservices.cloud9retail.net/CloudService.svc</cloudEndpoint>
+  <counterpointEndpoint>http://devservices.cloud9retail.net/CounterpointService.svc</counterpointEndpoint>
+  <counterpointConfig>
+    <companyID>1</companyID>
+    <storeID>EAST</storeID>
+    <locationID>EAST</locationID>
+    <stationID>1</stationID>
+    <drawerID>1</drawerID>
+    <userID>MGR</userID>
+    <password></password>
+    <defaultCustomerID />
+    <serviceID>1</serviceID>
+    <serviceKey>ebbcd043-9294-413b-871b-109164ad1ff0</serviceKey>
+  </counterpointConfig>
+  <magentoConfig>
+    <enableImageSync>false</enableImageSync>
+    <imageEndPoint></imageEndPoint>
+    <soapEndPoint>http://theregulators.org:81/magento/index.php/api/v2_soap/index/</soapEndPoint>
+    <apiUsername>pshearon</apiUsername>
+    <apiKey>6aa5c320-b4db-48fd-b06f-77521a4c77fe</apiKey>
+    <webSiteID>1</webSiteID>
+    <rootCategoryName>Counterpoint</rootCategoryName>
+  </magentoConfig>
+  <emailSettings>
+    <enabled>true</enabled>
+    <fromEmail>pat.shearon@gmail.com</fromEmail>
+    <fromName>Pat Shearon</fromName>
+    <toEmail>pshearon@cksystem.com</toEmail>
+    <ToName>pat shearon</ToName>
+    <subject>MagentoConnect Error / Bark N Purr</subject>
+    <body />
+    <host>smtp.gmail.com</host>
+    <password></password>
+    <port>587</port>
+    <enableHTML>true</enableHTML>
+    <enableSSL>true</enableSSL>
+  </emailSettings>
+</Config>
+
+
