@@ -12,4 +12,5 @@
     <Style x:Key="{x:Type ScrollViewer}" TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource ScrollViewerBaseStyle}" />
     <Style x:Key="{x:Type DockPanel}" TargetType="{x:Type DockPanel}" BasedOn="{StaticResource DockPanelBaseStyle}" />
     <Style x:Key="{x:Type StackPanel}" TargetType="{x:Type StackPanel}" BasedOn="{StaticResource StackPanelBaseStyle}" />
+    <Style x:Key="{x:Type Border}" TargetType="{x:Type Border}" BasedOn="{StaticResource BorderBaseStyle}" />
 </ResourceDictionary>

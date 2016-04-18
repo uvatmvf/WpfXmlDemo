@@ -6,14 +6,6 @@
         xmlns:local="clr-namespace:WpfXmlDemo"
         mc:Ignorable="d"
         Title="XML Template Utility v1.0.0" Height="500" Width="714.22" Background="White">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <!--<ResourceDictionary Source=".\Style\Styles.xaml"></ResourceDictionary>-->
-                <!--<ResourceDictionary Source=".\Style\StyleDefaultsBase.xaml"></ResourceDictionary>-->
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="0"></RowDefinition>
@@ -23,11 +15,9 @@
 
         <ScrollViewer x:Name="MyTemplateView" x:FieldModifier="public"  
                       Grid.Row="1" Style="{StaticResource ResourceKey=ScrollViewerBaseStyle}" Background="{x:Null}" >
-            <DockPanel LastChildFill="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{x:Null}">
-                <StackPanel x:Name="stkElements" x:FieldModifier="public" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{x:Null}" >
+            <DockPanel LastChildFill="True" Background="{x:Null}">
+                <StackPanel x:Name="stkElements" x:FieldModifier="public" Orientation="Vertical" Background="{x:Null}" >
                 </StackPanel>
-
-
             </DockPanel>
         </ScrollViewer>
         <StackPanel VerticalAlignment="Bottom" Grid.Row="2" Background="{x:Null}">

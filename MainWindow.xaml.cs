@@ -52,6 +52,10 @@ namespace WpfXmlDemo
             MyFileList = new ObservableCollection<string>();
 
             FileListViewModel xmlFiles = new FileListViewModel(@"Templates/", "*.xml");
+            // breaking MVVM here, ViewModel is not used as DataContext
+            // 1. TODO set datacontext 
+            // this.DataContext = xmlFiles;
+
             xmlFiles.Search();
             foreach (string file in xmlFiles.results)
             {

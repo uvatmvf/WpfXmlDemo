@@ -16,7 +16,7 @@
               Width="Auto" 
               Header="Configuration 123"              
               Template="{StaticResource StretchyExpanderTemp}">
-        <Border x:FieldModifier="public" x:Name="NodeBorder" CornerRadius="2" BorderThickness="1,0,2,2"> 
+        <Border x:FieldModifier="public" x:Name="NodeBorder" CornerRadius="5" BorderThickness="1,0,2,2"> 
             <Grid x:FieldModifier="public" x:Name="NodeGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

@@ -25,9 +25,7 @@
     <Color x:Key="StatusColorOne">White</Color>
     <Color x:Key="StatusColorTwo">White</Color>
     <Color x:Key="StatusColorThree">White</Color>
-    <!--Expander Toggle button control template-->
-   
-
+    
     <!-- every TextBox with property Style="{StaticResource TextBoxBaseStyle}" will use this style -->
     <Style x:Key="TextBoxBaseStyle" TargetType="{x:Type TextBox}">
         <Setter Property="Background">
@@ -46,7 +44,7 @@
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Margin" Value="4,4,4,4"/>
+        <Setter Property="Margin" Value="4,4,4,4"/>       
         <!--<Setter Property="BorderBrush">
             <Setter.Value>
                 <SolidColorBrush Color="{StaticResource BorderColor}"/>
@@ -54,6 +52,7 @@
         </Setter>-->
         <!--<Setter Property="Template" Value="{StaticResource TextBoxTemplateBase}"/>-->
     </Style>
+    <!-- every ListBoxItem with property Style="{StaticResource ListBoxItemBaseStyle}" will use this style -->
     <Style x:Key="ListBoxItemBaseStyle" TargetType="ListBoxItem">
         <Setter Property="Background">
             <Setter.Value>
@@ -117,6 +116,8 @@
                 <SolidColorBrush Color="{StaticResource WindowBackgroundColor}" />
             </Setter.Value>
         </Setter>-->
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
     </Style>
     <Style x:Key="StackPanelBaseStyle" TargetType="{x:Type StackPanel}">
         <Setter Property="Background">
@@ -124,14 +125,17 @@
                 <SolidColorBrush Color="{StaticResource WindowBackgroundColor}" />
             </Setter.Value>
         </Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+     </Style>
+    <Style x:Key="BorderBaseStyle" TargetType="{x:Type Border}">
+        <Setter Property="CornerRadius" Value="5"></Setter>        
+        <Setter Property="Border.BorderThickness" Value="2,2,1,1"></Setter>
+        <Setter Property="Border.BorderBrush" Value="#FF2543FF"></Setter>
+        <Style.Triggers>
+            <Trigger Property="Border.IsMouseOver" Value="True">
+                <Setter Property="Border.BorderBrush" Value="LightBlue" />
+            </Trigger>
+        </Style.Triggers>        
     </Style>
-    <!-- To make apply by default when included as a resource: -->
-    <!--<Style x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBoxBaseStyle}" />
-    <Style x:Key="{x:Type Label}" TargetType="{x:Type Label}" BasedOn="{StaticResource LabelBaseStyle}" />
-    <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonBaseStyle}" />
-    <Style x:Key="{x:Type ListBoxItem}" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListBoxItemBaseStyle}" />
-    <Style x:Key="{x:Type Window}" TargetType="{x:Type Window}" BasedOn="{StaticResource WindowBaseStyle}" />
-    <Style x:Key="{x:Type ScrollViewer}" TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource ScrollViewerBaseStyle}" />
-    <Style x:Key="{x:Type DockPanel}" TargetType="{x:Type DockPanel}" BasedOn="{StaticResource DockPanelBaseStyle}" />
-    <Style x:Key="{x:Type StackPanel}" TargetType="{x:Type StackPanel}" BasedOn="{StaticResource StackPanelBaseStyle}" />-->
 </ResourceDictionary>

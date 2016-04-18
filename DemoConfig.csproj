@@ -68,9 +68,6 @@
     <Compile Include="Views\SimpleDataNodeView.xaml.cs">
       <DependentUpon>SimpleDataNodeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\XmlTemplateView.xaml.cs">
-      <DependentUpon>XmlTemplateView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -135,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SimpleDataNodeView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\XmlTemplateView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

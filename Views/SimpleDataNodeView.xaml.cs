@@ -50,11 +50,7 @@ namespace WpfXmlDemo
             // Add template to the building stack
             NodeGrid.Children.Add(label);
             NodeGrid.Children.Add(inputControl);
-            //NodeBorder.Background = new SolidColorBrush((Color) ColorConverter.ConvertFromString("#FF383838"));
-            //NodeBorder.BorderBrush = NodeBorder.Background;
-
-            //Border  new Color( "#FF383838");
-            //NodeGrid.ParentNodeBorder
+            
         }
 
         public SimpleDataNodeView BuildNode(string name, string tag)

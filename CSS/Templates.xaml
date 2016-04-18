@@ -6,19 +6,12 @@
     <ControlTemplate x:Key="AnimatedExpanderBtnTemplate" TargetType="{x:Type ToggleButton}">
         <Border x:Name="ExpanderButtonBorder"
                     Padding="{TemplateBinding Padding}"                    
-                    HorizontalAlignment="Stretch" CornerRadius="5"
+                    HorizontalAlignment="Stretch" 
+                    CornerRadius="5"
                     Height="28"
-                    Width="{Binding
-                                RelativeSource={RelativeSource
-                                                Mode=FindAncestor, AncestorType={x:Type Expander}}, Path=ActualWidth}"
-                    Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Expander}}, Path=Background}">
-
-            <!--<Border.Background>
-                -->
-            <!--<ImageBrush ImageSource="/Images/ui-bg_gloss-wave_16_121212_500x100.png"></ImageBrush>-->
-            <!--
-                <SolidColorBrush Color="#FF2543FF"></SolidColorBrush>
-            </Border.Background>-->
+                    Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Expander}}, Path=ActualWidth}"
+                    Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Expander}}, Path=Background}"
+                Style="{StaticResource BorderBaseStyle}">           
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -54,18 +47,6 @@
                                       Margin="4,0,0,0"                                      
                                       ContentSource="Content" />
             </Grid>
-            <Border.Style>
-                <Style>
-                    <Setter Property="Border.BorderThickness" Value="2,2,1,1"></Setter>
-                    <Setter Property="Border.BorderBrush" Value="#FF2543FF"></Setter>
-                    <Style.Triggers>
-                        <Trigger Property="Border.IsMouseOver" Value="True">
-                            <Setter Property="Border.BorderBrush" Value="LightBlue" />
-                        </Trigger>
-                    </Style.Triggers>
-
-                </Style>
-            </Border.Style>
         </Border>
         <ControlTemplate.Triggers>
             <!-- Animate arrow when toggled-->
