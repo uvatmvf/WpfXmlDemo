@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:WpfXmlDemo"
         mc:Ignorable="d"
         Title="XML Template Utility v1.0.0" Height="500" Width="714.22" Background="White">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source=".\Style\Styles.xaml"></ResourceDictionary>-->
+                <!--<ResourceDictionary Source=".\Style\StyleDefaultsBase.xaml"></ResourceDictionary>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="0"></RowDefinition>
@@ -14,9 +22,8 @@
         </Grid.RowDefinitions>
 
         <ScrollViewer x:Name="MyTemplateView" x:FieldModifier="public"  
-                      Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{x:Null}" >
+                      Grid.Row="1" Style="{StaticResource ResourceKey=ScrollViewerBaseStyle}" Background="{x:Null}" >
             <DockPanel LastChildFill="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{x:Null}">
-
                 <StackPanel x:Name="stkElements" x:FieldModifier="public" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{x:Null}" >
                 </StackPanel>
 
@@ -24,7 +31,7 @@
             </DockPanel>
         </ScrollViewer>
         <StackPanel VerticalAlignment="Bottom" Grid.Row="2" Background="{x:Null}">
-            <Border BorderBrush="White" CornerRadius="5" BorderThickness="3,3,1,1"  Margin="5">
+            <Border BorderBrush="White" CornerRadius="5" BorderThickness="3,3,1,1"  Margin="5" >
                 <Button IsEnabled="True" Name="SaveButton" Content="Save" Foreground="White" Click="SaveButton_Click" VerticalAlignment="Bottom" 
                             Height="50" FontSize="28" BorderBrush="{x:Null}">
                     <Button.Background>
