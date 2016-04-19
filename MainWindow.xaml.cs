@@ -51,7 +51,7 @@ namespace WpfXmlDemo
 
             MyFileList = new ObservableCollection<string>();
 
-            FileListViewModel xmlFiles = new FileListViewModel(@"Templates/", "*.xml");
+            FileListViewModel xmlFiles = new FileListViewModel(@"DataFiles/", "*.xml");
             // breaking MVVM here, ViewModel is not used as DataContext
             // 1. TODO set datacontext 
             // this.DataContext = xmlFiles;
@@ -141,8 +141,7 @@ namespace WpfXmlDemo
                 ui.BuildLabelText(doc, text, doc.InnerText, doc.Name.ToUpper());
             }
             
-        }
-
+        }        
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (FrameworkElement templateFileElement in stkElements.Children)
@@ -220,6 +219,16 @@ namespace WpfXmlDemo
                 xmlDoc.Save(fileName);
 
             }
+        }
+
+        private void CommandBinding_CanExecute(object sender, System.Windows.Input.CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
+        {
+            throw new NotImplementedException("Move this command binding to a viewmodel!");
         }
     }
 }

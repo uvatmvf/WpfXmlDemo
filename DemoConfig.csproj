@@ -98,10 +98,10 @@
     <Content Include="Images\ui-bg_gloss-wave_16_121212_500x100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Templates\books.xml">
+    <Content Include="DataFIles\books.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Templates\OrderDepositTicket.xml">
+    <Content Include="DataFIles\OrderDepositTicket.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
