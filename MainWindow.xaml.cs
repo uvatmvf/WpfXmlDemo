@@ -87,9 +87,7 @@ namespace WpfXmlDemo
             foreach (string tFileName in MyFileList)
             {
                 try
-                {
-
-
+                {                    
                     xmlDoc = new XmlDocument();
                     xmlDoc.LoadXml(File.ReadAllText(tFileName));
                     templateFileName = tFileName;
