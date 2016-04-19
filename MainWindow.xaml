@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:WpfXmlDemo"
         mc:Ignorable="d"
         Title="XML Template Utility v1.0.0" Height="500" Width="714.22" Background="White">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Save" CanExecute="SaveCommand_CanExecute" Executed="SaveCommand_Executed" />
+    </Window.CommandBindings>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="0"></RowDefinition>
@@ -23,10 +26,8 @@
         <StackPanel VerticalAlignment="Bottom" Grid.Row="2" Background="{x:Null}">
             <Border BorderBrush="White" CornerRadius="5" BorderThickness="3,3,1,1"  Margin="5" >
                 <Button IsEnabled="True" Name="SaveButton" Content="Save" Foreground="White" VerticalAlignment="Bottom" 
-                            Height="50" FontSize="28" BorderBrush="{x:Null}">  
-                    <Button.CommandBindings>
-                        <!--<CommandBinding Command="{x:Static local:}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"></CommandBinding>-->
-                    </Button.CommandBindings>
+                            Height="50" FontSize="28" BorderBrush="{x:Null}"
+                        Command="{Binding SaveCommand}">                     
                     <Button.Background>
                         <ImageBrush ImageSource="Images/ui-bg_gloss-wave_16_121212_500x100.png"/>
                     </Button.Background>

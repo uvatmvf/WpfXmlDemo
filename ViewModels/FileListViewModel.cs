@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using DemoConfig.ViewModels;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows.Input;
 
 namespace WpfXmlDemo.ViewModels
 {
     public class FileListViewModel 
     {
-
         public FileListViewModel(string rootPath, string extensionFilter)
         {
             ExtensionFilter = extensionFilter;
@@ -26,6 +28,34 @@ namespace WpfXmlDemo.ViewModels
         public void Search()
         {
             results = Directory.EnumerateFiles(contextRootPath, ExtensionFilter, SearchOption.AllDirectories).ToList<string>();
+
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException("Bind to me from a command!");
+        }
+
+        public bool CanSave
+        {
+            get
+            {
+                // todo: implement a dirty bit for the xml file contents
+                return true;
+            }
+        }
+
+        RelayCommand _saveCommand; 
+        public ICommand SaveCommand 
+        { 
+            get 
+            { 
+                if (_saveCommand == null) 
+                { 
+                    _saveCommand = new RelayCommand(param => this.Save(), param => this.CanSave); 
+                } 
+                return _saveCommand; 
+            } 
         }
     }
 }
