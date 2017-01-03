@@ -28,7 +28,6 @@ namespace WpfXmlDemo.ViewModels
         public void Search()
         {
             results = Directory.EnumerateFiles(contextRootPath, ExtensionFilter, SearchOption.AllDirectories).ToList<string>();
-
         }
 
         public void Save()

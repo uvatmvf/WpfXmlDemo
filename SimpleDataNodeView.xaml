@@ -15,7 +15,7 @@
               HorizontalContentAlignment="Stretch" 
               Width="Auto" 
               Header="Configuration 123"              
-              Template="{StaticResource StretchyExpanderTemp}">
+              Template="{StaticResource StretchyExpander}">
         <Border x:FieldModifier="public" x:Name="NodeBorder" BorderThickness="1,0,2,2"> 
             <Grid x:FieldModifier="public" x:Name="NodeGrid">
                 <Grid.RowDefinitions>

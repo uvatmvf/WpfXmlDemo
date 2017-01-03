@@ -3,7 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
-    <ControlTemplate x:Key="AnimatedExpanderBtnTemplate" TargetType="{x:Type ToggleButton}">
+    <ControlTemplate x:Key="AnimatedToggleButton" TargetType="{x:Type ToggleButton}">
         <Border x:Name="ExpanderButtonBorder"
                     Padding="{TemplateBinding Padding}"                    
                     HorizontalAlignment="Stretch" 
@@ -99,12 +99,11 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <!--Stretchy Expander control template-->
-    <ControlTemplate x:Key="StretchyExpanderTemp" TargetType="{x:Type Expander}">
+    <ControlTemplate x:Key="StretchyExpander" TargetType="{x:Type Expander}">
         <DockPanel>
             <ToggleButton x:Name="ExpanderButton" 
                               DockPanel.Dock="Top"
-                              Template="{StaticResource AnimatedExpanderBtnTemplate}"
+                              Template="{StaticResource AnimatedToggleButton}"
                               Content="{TemplateBinding Header}"
                               IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
                               OverridesDefaultStyle="True"
@@ -142,7 +141,6 @@
                     </BeginStoryboard>
                 </Trigger.ExitActions>
             </Trigger>
-
         </ControlTemplate.Triggers>
     </ControlTemplate>
 </ResourceDictionary>

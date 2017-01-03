@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfXmlDemo
 {
@@ -34,7 +24,6 @@ namespace WpfXmlDemo
                 Content = text,
                 MinWidth = 100
             };
-
             TextBox inputControl = new TextBox()
             {
                 Text = value,
@@ -50,7 +39,6 @@ namespace WpfXmlDemo
             // Add template to the building stack
             NodeGrid.Children.Add(label);
             NodeGrid.Children.Add(inputControl);
-            
         }
 
         public SimpleDataNodeView BuildNode(string name, string tag)
@@ -60,10 +48,10 @@ namespace WpfXmlDemo
             request.expDesc.IsExpanded = false;
             request.expDesc.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2543FF"));
             request.expDesc.Background = new SolidColorBrush(Colors.White);
-            this.NodeGrid.RowDefinitions.Add(new RowDefinition());
-            Grid.SetRow(request, this.NodeGrid.RowDefinitions.Count - 1);
+            NodeGrid.RowDefinitions.Add(new RowDefinition());
+            Grid.SetRow(request, NodeGrid.RowDefinitions.Count - 1);
             Grid.SetColumnSpan(request, 2);
-            this.NodeGrid.Children.Add(request);
+            NodeGrid.Children.Add(request);
             return request;
         } 
 
@@ -90,16 +78,6 @@ namespace WpfXmlDemo
                 }
             }
             return request;
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Border_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

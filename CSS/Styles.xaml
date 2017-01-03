@@ -1,8 +1,6 @@
 ﻿<ResourceDictionary xmlns:local="clr-namespace:WpfXmlDemo"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
-                    >    
-    
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >    
     <!--<Color x:Key="WindowBackgroundColor">#202020</Color>
     <Color x:Key="BackgroundColor">#404040</Color>
     <Color x:Key="ControlBackgroundColor">#FF646464</Color>
