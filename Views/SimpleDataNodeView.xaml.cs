@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace WpfXmlDemo
+namespace DemoConfig.Views
 {
     /// <summary>
     /// Interaction logic for Node.xaml

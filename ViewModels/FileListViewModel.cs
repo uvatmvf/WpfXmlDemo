@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Input;
 
-namespace WpfXmlDemo.ViewModels
+namespace DemoConfig.ViewModels
 {
     public class FileListViewModel 
     {

@@ -8,9 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Xml;
 using System.Xml.Linq;
-using WpfXmlDemo.ViewModels;
+using DemoConfig.ViewModels;
 
-namespace WpfXmlDemo
+namespace DemoConfig.Views
 {
     /// <summary>
     /// Interaction logic for MainWIndow.xaml

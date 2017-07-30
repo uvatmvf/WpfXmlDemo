@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfXmlDemo
+namespace DemoConfig
 {
     /// <summary>
     /// Interaction logic for App.xaml

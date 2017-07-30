@@ -1,1 +1,0 @@
-C:\workspace\sandbox\RCConfig\RCConfig\bin\Release\DemoConfig.exe.config
