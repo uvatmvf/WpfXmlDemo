@@ -1,7 +1,7 @@
 # DemoConfig
 Demo WPF application with styles, triggers and recursive control building in an xml data app.
 
-![Screen Grab](/images/capture.png)
+![Screen Grab](https://github.com/uvatmvf/WpfXmlDemo/blob/master/Images/Capture.PNG)
 This demo is meant to bridge Windows FORMS to Windows Presentation Foundation. If you are used to working 
 in WinForms, this shows an equivalent implementation pattern for recursive form building and manually wire-up of data binding.
 
